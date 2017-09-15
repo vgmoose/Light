@@ -13,6 +13,8 @@ class ViewController: NSViewController {
 
 	@IBOutlet weak var conversation: WebView!
 	
+	var session: LightSession?
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -33,7 +35,6 @@ class ViewController: NSViewController {
 		// Update the view, if already loaded.
 		}
 	}
-
 
 }
 

@@ -7,18 +7,27 @@
 //
 
 import UIKit
+import WebKit
+import SwiftMatrixSDK
+
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var conversation: UIWebView!
+	
+	var session: LightSession?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		//load a file
-		var testHTML = NSBundle.mainBundle().pathForResource("chat", ofType: "html")
-		var contents = NSString(contentsOfFile: testHTML!, encoding: NSUTF8StringEncoding, error: nil)
-		var baseUrl = NSURL(fileURLWithPath: testHTML!) //for load css file
+		var url = URL(fileURLWithPath: Bundle.main.path(forResource: "chat", ofType: "html")!)
 		
-		conversation.loadHTMLString(contents, baseURL: baseUrl)
+		//var url = NSURL(string: "http://www.google.com")
+		
+		var request = URLRequest(url: url)
+		
+		conversation.loadRequest(request)
+//		let scrollView = conversation.frameView.documentView.enclosingScrollView!
 	}
 
 	override func didReceiveMemoryWarning() {

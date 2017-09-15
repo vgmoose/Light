@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C5568C01F6BB5550064419C /* LightSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568BF1F6BB5550064419C /* LightSession.swift */; };
+		9C5568C21F6BB5920064419C /* TurtleSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568C11F6BB5920064419C /* TurtleSession.swift */; };
+		9C5568C51F6BBE230064419C /* ConnectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568C41F6BBE230064419C /* ConnectController.swift */; };
+		9C5568C71F6BBE5E0064419C /* ConnectLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568C61F6BBE5E0064419C /* ConnectLogic.swift */; };
+		9C5568C81F6BC8F70064419C /* ConnectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568C41F6BBE230064419C /* ConnectController.swift */; };
+		9C5568CA1F6BCAB70064419C /* ChatWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568C91F6BCAB70064419C /* ChatWindowController.swift */; };
 		9CFF2F811F64CDE3005915AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF2F801F64CDE3005915AF /* AppDelegate.swift */; };
 		9CFF2F831F64CDE3005915AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF2F821F64CDE3005915AF /* ViewController.swift */; };
 		9CFF2F861F64CDE3005915AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2F841F64CDE3005915AF /* Main.storyboard */; };
@@ -16,14 +22,19 @@
 		9CFF2F991F64CDFF005915AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF2F981F64CDFF005915AF /* ViewController.swift */; };
 		9CFF2F9B1F64CDFF005915AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2F9A1F64CDFF005915AF /* Assets.xcassets */; };
 		9CFF2F9E1F64CDFF005915AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2F9C1F64CDFF005915AF /* Main.storyboard */; };
-		9CFF2FA41F64D02B005915AF /* chat.html in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2FA31F64D02B005915AF /* chat.html */; };
-		9CFF2FA51F64D134005915AF /* chat.html in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2FA31F64D02B005915AF /* chat.html */; };
 		9CFF2FA81F64D141005915AF /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFF2FA71F64D140005915AF /* AppKit.framework */; };
-		9CFF2FAD1F64DB31005915AF /* tmp in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2FAC1F64DB31005915AF /* tmp */; };
-		9CFF2FAE1F64DB37005915AF /* tmp in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2FAC1F64DB31005915AF /* tmp */; };
+		9CFF2FB41F64E56C005915AF /* tmp in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2FAC1F64DB31005915AF /* tmp */; };
+		9CFF2FB51F64E56C005915AF /* chat.html in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2FB11F64E549005915AF /* chat.html */; };
+		9CFF2FB61F64E572005915AF /* tmp in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2FAC1F64DB31005915AF /* tmp */; };
+		9CFF2FB71F64E572005915AF /* chat.html in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2FB11F64E549005915AF /* chat.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C5568BF1F6BB5550064419C /* LightSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSession.swift; sourceTree = "<group>"; };
+		9C5568C11F6BB5920064419C /* TurtleSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurtleSession.swift; sourceTree = "<group>"; };
+		9C5568C41F6BBE230064419C /* ConnectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectController.swift; sourceTree = "<group>"; };
+		9C5568C61F6BBE5E0064419C /* ConnectLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectLogic.swift; sourceTree = "<group>"; };
+		9C5568C91F6BCAB70064419C /* ChatWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWindowController.swift; sourceTree = "<group>"; };
 		9CFF2F7D1F64CDE3005915AF /* Light iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFF2F801F64CDE3005915AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CFF2F821F64CDE3005915AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +50,8 @@
 		9CFF2F9F1F64CDFF005915AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CFF2FA31F64D02B005915AF /* chat.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = chat.html; sourceTree = "<group>"; };
 		9CFF2FA71F64D140005915AF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		9CFF2FAC1F64DB31005915AF /* tmp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tmp; sourceTree = "<group>"; };
+		9CFF2FAC1F64DB31005915AF /* tmp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tmp; path = "Light MacOS/tmp"; sourceTree = "<group>"; };
+		9CFF2FB11F64E549005915AF /* chat.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = chat.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +73,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C5568C31F6BB5970064419C /* sessions */ = {
+			isa = PBXGroup;
+			children = (
+				9C5568BF1F6BB5550064419C /* LightSession.swift */,
+				9C5568C11F6BB5920064419C /* TurtleSession.swift */,
+				9C5568C61F6BBE5E0064419C /* ConnectLogic.swift */,
+			);
+			name = sessions;
+			sourceTree = "<group>";
+		};
 		9CFF2F721F64CDC4005915AF = {
 			isa = PBXGroup;
 			children = (
+				9CFF2FAC1F64DB31005915AF /* tmp */,
+				9CFF2FB11F64E549005915AF /* chat.html */,
 				9CFF2F7F1F64CDE3005915AF /* Light */,
 				9CFF2F951F64CDFF005915AF /* Light MacOS */,
 				9CFF2F7E1F64CDE3005915AF /* Products */,
@@ -83,6 +107,7 @@
 		9CFF2F7F1F64CDE3005915AF /* Light */ = {
 			isa = PBXGroup;
 			children = (
+				9C5568C31F6BB5970064419C /* sessions */,
 				9CFF2F801F64CDE3005915AF /* AppDelegate.swift */,
 				9CFF2F821F64CDE3005915AF /* ViewController.swift */,
 				9CFF2F841F64CDE3005915AF /* Main.storyboard */,
@@ -98,11 +123,12 @@
 			children = (
 				9CFF2F961F64CDFF005915AF /* AppDelegate.swift */,
 				9CFF2F981F64CDFF005915AF /* ViewController.swift */,
-				9CFF2FAC1F64DB31005915AF /* tmp */,
+				9C5568C41F6BBE230064419C /* ConnectController.swift */,
 				9CFF2F9A1F64CDFF005915AF /* Assets.xcassets */,
 				9CFF2F9C1F64CDFF005915AF /* Main.storyboard */,
 				9CFF2F9F1F64CDFF005915AF /* Info.plist */,
 				9CFF2FA31F64D02B005915AF /* chat.html */,
+				9C5568C91F6BCAB70064419C /* ChatWindowController.swift */,
 			);
 			path = "Light MacOS";
 			sourceTree = "<group>";
@@ -197,9 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CFF2FA41F64D02B005915AF /* chat.html in Resources */,
+				9CFF2FB41F64E56C005915AF /* tmp in Resources */,
+				9CFF2FB51F64E56C005915AF /* chat.html in Resources */,
 				9CFF2F8B1F64CDE3005915AF /* LaunchScreen.storyboard in Resources */,
-				9CFF2FAD1F64DB31005915AF /* tmp in Resources */,
 				9CFF2F881F64CDE3005915AF /* Assets.xcassets in Resources */,
 				9CFF2F861F64CDE3005915AF /* Main.storyboard in Resources */,
 			);
@@ -209,8 +235,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CFF2FAE1F64DB37005915AF /* tmp in Resources */,
-				9CFF2FA51F64D134005915AF /* chat.html in Resources */,
+				9CFF2FB61F64E572005915AF /* tmp in Resources */,
+				9CFF2FB71F64E572005915AF /* chat.html in Resources */,
 				9CFF2F9B1F64CDFF005915AF /* Assets.xcassets in Resources */,
 				9CFF2F9E1F64CDFF005915AF /* Main.storyboard in Resources */,
 			);
@@ -225,6 +251,7 @@
 			files = (
 				9CFF2F831F64CDE3005915AF /* ViewController.swift in Sources */,
 				9CFF2F811F64CDE3005915AF /* AppDelegate.swift in Sources */,
+				9C5568C51F6BBE230064419C /* ConnectController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,8 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5568C81F6BC8F70064419C /* ConnectController.swift in Sources */,
+				9C5568CA1F6BCAB70064419C /* ChatWindowController.swift in Sources */,
 				9CFF2F991F64CDFF005915AF /* ViewController.swift in Sources */,
 				9CFF2F971F64CDFF005915AF /* AppDelegate.swift in Sources */,
+				9C5568C21F6BB5920064419C /* TurtleSession.swift in Sources */,
+				9C5568C01F6BB5550064419C /* LightSession.swift in Sources */,
+				9C5568C71F6BBE5E0064419C /* ConnectLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +543,7 @@
 				9CFF2F8F1F64CDE3005915AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CFF2FA01F64CDFF005915AF /* Build configuration list for PBXNativeTarget "Light" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +552,7 @@
 				9CFF2FA21F64CDFF005915AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

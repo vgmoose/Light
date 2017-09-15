@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="buL-Dz-Dbg">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
@@ -664,8 +664,8 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Light" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                <windowController storyboardIdentifier="ChatWindowController" id="B8D-0N-5wS" customClass="ChatWindowController" customModule="Light" sceneMemberID="viewController">
+                    <window key="window" identifier="ChatWindowControllerWindow" title="Light" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -682,8 +682,8 @@
         <!--Window Controller-->
         <scene sceneID="kKQ-H1-T2C">
             <objects>
-                <windowController id="buL-Dz-Dbg" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="qn0-sA-oBw">
+                <windowController storyboardIdentifier="z" id="buL-Dz-Dbg" sceneMemberID="viewController">
+                    <window key="window" title="Config" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="qn0-sA-oBw">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="163" y="199" width="480" height="270"/>
@@ -697,39 +697,134 @@
             </objects>
             <point key="canvasLocation" x="678" y="153"/>
         </scene>
-        <!--View Controller-->
+        <!--Connect Controller-->
         <scene sceneID="E1v-SI-RXf">
             <objects>
-                <viewController id="aQR-n5-tT3" sceneMemberID="viewController">
+                <viewController id="aQR-n5-tT3" customClass="ConnectController" customModule="Light" sceneMemberID="viewController">
                     <view key="view" id="hkZ-bN-GOZ">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="237" height="241"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CC0-yT-vm1">
+                                <rect key="frame" x="105" y="197" width="101" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="Turtle" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Cjf-WY-GcF" id="rU2-2C-dJg">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="jts-Mv-FKk">
+                                        <items>
+                                            <menuItem title="Turtle" state="on" id="Cjf-WY-GcF"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ht3-lZ-P7D">
+                                <rect key="frame" x="32" y="202" width="59" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Protocol:" id="Yyk-UR-se5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fVl-gm-ALN">
+                                <rect key="frame" x="72" y="13" width="92" height="32"/>
+                                <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M5K-xH-YPI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="doConnect:" target="aQR-n5-tT3" id="qhd-Dy-O9d"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-ix-E6g">
+                                <rect key="frame" x="39" y="62" width="158" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="6I7-N2-302">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">host: 127.0.0.1
+port: 55225
+nick: User</string>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CC0-yT-vm1" secondAttribute="trailing" constant="34" id="6C4-zx-px1"/>
+                            <constraint firstAttribute="trailing" secondItem="fVl-gm-ALN" secondAttribute="trailing" constant="79" id="8bU-at-474"/>
+                            <constraint firstItem="Ht3-lZ-P7D" firstAttribute="leading" secondItem="hkZ-bN-GOZ" secondAttribute="leading" constant="34" id="Axd-rc-tYj"/>
+                            <constraint firstAttribute="bottom" secondItem="fVl-gm-ALN" secondAttribute="bottom" constant="20" id="bvi-ph-1BJ"/>
+                            <constraint firstItem="fVl-gm-ALN" firstAttribute="leading" secondItem="hkZ-bN-GOZ" secondAttribute="leading" constant="78" id="eCT-RZ-WxO"/>
+                            <constraint firstItem="CC0-yT-vm1" firstAttribute="top" secondItem="hkZ-bN-GOZ" secondAttribute="top" constant="20" id="g3e-oa-t16"/>
+                            <constraint firstItem="CC0-yT-vm1" firstAttribute="leading" secondItem="Ht3-lZ-P7D" secondAttribute="trailing" constant="18" id="iNi-VZ-eh7"/>
+                            <constraint firstItem="Ht3-lZ-P7D" firstAttribute="top" secondItem="hkZ-bN-GOZ" secondAttribute="top" constant="22" id="w28-gP-vjK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="data" destination="bdU-ix-E6g" id="mGd-im-3DI"/>
+                        <outlet property="proto" destination="CC0-yT-vm1" id="xVP-w4-e8W"/>
+                    </connections>
                 </viewController>
                 <customObject id="T7b-5a-ukw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646" y="628"/>
+            <point key="canvasLocation" x="524.5" y="613.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y6c-8B-w2W">
+            <objects>
+                <viewController id="TyF-D0-mAR" sceneMemberID="viewController">
+                    <view key="view" id="IFU-OH-vJG">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="O8g-4a-UZY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="724"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="F2G-qA-OgS">
+            <objects>
+                <viewController id="zQ8-lo-I3f" sceneMemberID="viewController">
+                    <view key="view" id="ROW-pO-EXE">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="Igj-gk-eAa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1194" y="1085"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Light" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="x" id="XfG-lQ-9wD" customClass="ViewController" customModule="Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="410" height="521"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <webView maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqn-LP-KCh">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="20" width="410" height="501"/>
                                 <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO" loadsImagesAutomatically="NO">
                                     <nil key="identifier"/>
                                 </webPreferences>
                             </webView>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Ja-tk-pKp">
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="LPQ-hs-8Pn">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Xqn-LP-KCh" secondAttribute="trailing" id="1t8-VE-V5b"/>
-                            <constraint firstAttribute="bottom" secondItem="Xqn-LP-KCh" secondAttribute="bottom" id="QgP-ot-3ec"/>
+                            <constraint firstAttribute="bottom" secondItem="4Ja-tk-pKp" secondAttribute="bottom" id="9OD-x8-8Fy"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ja-tk-pKp" secondAttribute="trailing" id="QrZ-wL-P3A"/>
                             <constraint firstItem="Xqn-LP-KCh" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Wkc-ZJ-Kmc"/>
                             <constraint firstItem="Xqn-LP-KCh" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="bKC-Lg-JBJ"/>
+                            <constraint firstItem="4Ja-tk-pKp" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fek-Wm-hcB"/>
+                            <constraint firstAttribute="bottom" secondItem="Xqn-LP-KCh" secondAttribute="bottom" constant="20" id="luf-i5-258"/>
                         </constraints>
                     </view>
                     <connections>
@@ -738,7 +833,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="40" y="780.5"/>
         </scene>
     </scenes>
 </document>
