@@ -14,4 +14,6 @@ class ChatWindowController : NSWindowController
 	convenience init() {
 		self.init(windowNibName: "ChatWindowControllerWindow")
 	}
+	
+	
 }

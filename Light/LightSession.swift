@@ -12,6 +12,7 @@ import Cocoa
 class LightSession : NSObject, StreamDelegate
 {
 	var controller: ChatWindowController
+	var view: ViewController
 	
 	// input and output streams for the socket
 	var inputStream: InputStream?
@@ -22,6 +23,11 @@ class LightSession : NSObject, StreamDelegate
 		let storyboard = NSStoryboard(name: "Main", bundle: nil)
 		self.controller = storyboard.instantiateController(withIdentifier: "ChatWindowController") as! ChatWindowController
 		self.controller.showWindow(nil)
+		
+		self.view = self.controller.window!.contentViewController! as! ViewController
+		super.init()
+
+		self.view.session = self
 	}
 	
 	// perform a login and obtain any info needed to persist a connection
@@ -34,6 +40,8 @@ class LightSession : NSObject, StreamDelegate
 	
 	// listen for any incoming messages
 	func listen() { }
+	
+	func textEntered(msg: String) { }
 
 	func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
 		

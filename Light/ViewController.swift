@@ -13,9 +13,14 @@ import SwiftMatrixSDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var input: NSTextField!
 	@IBOutlet weak var conversation: UIWebView!
 	
 	var session: LightSession?
+    @IBAction func textEntered(_ sender: Any) {
+    }
+    @IBAction func textEntered(_ sender: Any) {
+    }
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -31,6 +36,10 @@ class ViewController: UIViewController {
 	}
 
 	override func didReceiveMemoryWarning() {
+        @IBAction func textEntered(_ sender: Any) {
+        }
+        @IBAction func texted(_ sender: Any) {
+        }
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}

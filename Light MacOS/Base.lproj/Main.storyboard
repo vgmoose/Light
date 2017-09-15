@@ -668,7 +668,7 @@
                     <window key="window" identifier="ChatWindowControllerWindow" title="Light" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="573" y="594" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -815,6 +815,9 @@ nick: User</string>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="textEntered:" target="XfG-lQ-9wD" id="32u-nl-eNw"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <constraints>
@@ -829,6 +832,7 @@ nick: User</string>
                     </view>
                     <connections>
                         <outlet property="conversation" destination="Xqn-LP-KCh" id="maM-U9-qXC"/>
+                        <outlet property="input" destination="LPQ-hs-8Pn" id="Abu-gn-dyL"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
