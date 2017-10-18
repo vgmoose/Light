@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="buL-Dz-Dbg">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G17020" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="buL-Dz-Dbg">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <plugIn identifier="com.apple.WebKitIBPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -707,15 +706,26 @@
                         <subviews>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CC0-yT-vm1">
                                 <rect key="frame" x="105" y="197" width="101" height="26"/>
-                                <popUpButtonCell key="cell" type="push" title="Turtle" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Cjf-WY-GcF" id="rU2-2C-dJg">
+                                <popUpButtonCell key="cell" type="push" title="- Select -" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Cjf-WY-GcF" id="rU2-2C-dJg">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="jts-Mv-FKk">
                                         <items>
-                                            <menuItem title="Turtle" state="on" id="Cjf-WY-GcF"/>
+                                            <menuItem title="- Select -" state="on" id="Cjf-WY-GcF">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="Matrix" id="mpf-F8-4pk"/>
+                                            <menuItem title="Turtle" id="XbV-be-qFq"/>
+                                            <menuItem title="IRC" id="R03-fQ-Xhm"/>
+                                            <menuItem title="XMPP" id="1XZ-nS-cSD"/>
+                                            <menuItem title="Bonjour" id="rC2-8C-cSa"/>
+                                            <menuItem title="Echo" id="23n-E4-PGS"/>
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="stateChanged:" target="aQR-n5-tT3" id="69B-q0-7lS"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ht3-lZ-P7D">
                                 <rect key="frame" x="32" y="202" width="59" height="17"/>
@@ -735,14 +745,13 @@
                                     </connections>
                                 </buttonCell>
                             </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-ix-E6g">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bdU-ix-E6g">
                                 <rect key="frame" x="39" y="62" width="158" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="6I7-N2-302">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="7WW-Q3-bDo"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Select a protocol from the list above..." drawsBackground="YES" id="6I7-N2-302">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">host: 127.0.0.1
-port: 55225
-nick: User</string>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -752,10 +761,14 @@ nick: User</string>
                             <constraint firstAttribute="trailing" secondItem="CC0-yT-vm1" secondAttribute="trailing" constant="34" id="6C4-zx-px1"/>
                             <constraint firstAttribute="trailing" secondItem="fVl-gm-ALN" secondAttribute="trailing" constant="79" id="8bU-at-474"/>
                             <constraint firstItem="Ht3-lZ-P7D" firstAttribute="leading" secondItem="hkZ-bN-GOZ" secondAttribute="leading" constant="34" id="Axd-rc-tYj"/>
+                            <constraint firstAttribute="trailing" secondItem="bdU-ix-E6g" secondAttribute="trailing" constant="40" id="Eq2-DH-wIL"/>
+                            <constraint firstItem="bdU-ix-E6g" firstAttribute="leading" secondItem="hkZ-bN-GOZ" secondAttribute="leading" constant="39" id="Gxf-xJ-sNj"/>
+                            <constraint firstItem="bdU-ix-E6g" firstAttribute="top" secondItem="CC0-yT-vm1" secondAttribute="bottom" constant="21" id="bh8-Yt-fgM"/>
                             <constraint firstAttribute="bottom" secondItem="fVl-gm-ALN" secondAttribute="bottom" constant="20" id="bvi-ph-1BJ"/>
                             <constraint firstItem="fVl-gm-ALN" firstAttribute="leading" secondItem="hkZ-bN-GOZ" secondAttribute="leading" constant="78" id="eCT-RZ-WxO"/>
                             <constraint firstItem="CC0-yT-vm1" firstAttribute="top" secondItem="hkZ-bN-GOZ" secondAttribute="top" constant="20" id="g3e-oa-t16"/>
                             <constraint firstItem="CC0-yT-vm1" firstAttribute="leading" secondItem="Ht3-lZ-P7D" secondAttribute="trailing" constant="18" id="iNi-VZ-eh7"/>
+                            <constraint firstItem="fVl-gm-ALN" firstAttribute="top" secondItem="bdU-ix-E6g" secondAttribute="bottom" constant="21" id="t7X-TB-kcY"/>
                             <constraint firstItem="Ht3-lZ-P7D" firstAttribute="top" secondItem="hkZ-bN-GOZ" secondAttribute="top" constant="22" id="w28-gP-vjK"/>
                         </constraints>
                     </view>

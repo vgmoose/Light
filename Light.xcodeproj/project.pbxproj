@@ -13,6 +13,11 @@
 		9C5568C71F6BBE5E0064419C /* ConnectLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568C61F6BBE5E0064419C /* ConnectLogic.swift */; };
 		9C5568C81F6BC8F70064419C /* ConnectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568C41F6BBE230064419C /* ConnectController.swift */; };
 		9C5568CA1F6BCAB70064419C /* ChatWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5568C91F6BCAB70064419C /* ChatWindowController.swift */; };
+		9C6914901F971621003B77EF /* MatrixSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69148F1F971621003B77EF /* MatrixSession.swift */; };
+		9C6914921F971A2D003B77EF /* IRCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6914911F971A2D003B77EF /* IRCSession.swift */; };
+		9C6914941F971AA3003B77EF /* XMPPSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6914931F971AA3003B77EF /* XMPPSession.swift */; };
+		9C6914961F971BC1003B77EF /* EchoSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6914951F971BC1003B77EF /* EchoSession.swift */; };
+		9C6914981F971C57003B77EF /* BonjourSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6914971F971C57003B77EF /* BonjourSession.swift */; };
 		9CFF2F811F64CDE3005915AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF2F801F64CDE3005915AF /* AppDelegate.swift */; };
 		9CFF2F831F64CDE3005915AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF2F821F64CDE3005915AF /* ViewController.swift */; };
 		9CFF2F861F64CDE3005915AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF2F841F64CDE3005915AF /* Main.storyboard */; };
@@ -35,6 +40,11 @@
 		9C5568C41F6BBE230064419C /* ConnectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectController.swift; sourceTree = "<group>"; };
 		9C5568C61F6BBE5E0064419C /* ConnectLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectLogic.swift; sourceTree = "<group>"; };
 		9C5568C91F6BCAB70064419C /* ChatWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWindowController.swift; sourceTree = "<group>"; };
+		9C69148F1F971621003B77EF /* MatrixSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSession.swift; sourceTree = "<group>"; };
+		9C6914911F971A2D003B77EF /* IRCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCSession.swift; sourceTree = "<group>"; };
+		9C6914931F971AA3003B77EF /* XMPPSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMPPSession.swift; sourceTree = "<group>"; };
+		9C6914951F971BC1003B77EF /* EchoSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoSession.swift; sourceTree = "<group>"; };
+		9C6914971F971C57003B77EF /* BonjourSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonjourSession.swift; sourceTree = "<group>"; };
 		9CFF2F7D1F64CDE3005915AF /* Light iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFF2F801F64CDE3005915AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CFF2F821F64CDE3005915AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,9 +88,13 @@
 			children = (
 				9C5568BF1F6BB5550064419C /* LightSession.swift */,
 				9C5568C11F6BB5920064419C /* TurtleSession.swift */,
-				9C5568C61F6BBE5E0064419C /* ConnectLogic.swift */,
+				9C69148F1F971621003B77EF /* MatrixSession.swift */,
+				9C6914911F971A2D003B77EF /* IRCSession.swift */,
+				9C6914951F971BC1003B77EF /* EchoSession.swift */,
+				9C6914971F971C57003B77EF /* BonjourSession.swift */,
+				9C6914931F971AA3003B77EF /* XMPPSession.swift */,
 			);
-			name = sessions;
+			path = sessions;
 			sourceTree = "<group>";
 		};
 		9CFF2F721F64CDC4005915AF = {
@@ -109,6 +123,7 @@
 			children = (
 				9C5568C31F6BB5970064419C /* sessions */,
 				9CFF2F801F64CDE3005915AF /* AppDelegate.swift */,
+				9C5568C61F6BBE5E0064419C /* ConnectLogic.swift */,
 				9CFF2F821F64CDE3005915AF /* ViewController.swift */,
 				9CFF2F841F64CDE3005915AF /* Main.storyboard */,
 				9CFF2F871F64CDE3005915AF /* Assets.xcassets */,
@@ -260,12 +275,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5568C81F6BC8F70064419C /* ConnectController.swift in Sources */,
+				9C6914961F971BC1003B77EF /* EchoSession.swift in Sources */,
+				9C6914981F971C57003B77EF /* BonjourSession.swift in Sources */,
 				9C5568CA1F6BCAB70064419C /* ChatWindowController.swift in Sources */,
 				9CFF2F991F64CDFF005915AF /* ViewController.swift in Sources */,
 				9CFF2F971F64CDFF005915AF /* AppDelegate.swift in Sources */,
 				9C5568C21F6BB5920064419C /* TurtleSession.swift in Sources */,
 				9C5568C01F6BB5550064419C /* LightSession.swift in Sources */,
 				9C5568C71F6BBE5E0064419C /* ConnectLogic.swift in Sources */,
+				9C6914941F971AA3003B77EF /* XMPPSession.swift in Sources */,
+				9C6914921F971A2D003B77EF /* IRCSession.swift in Sources */,
+				9C6914901F971621003B77EF /* MatrixSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +374,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Light/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -405,7 +425,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Light/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vgmoose.Light;
@@ -463,7 +483,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Light MacOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vgmoose.Light-MacOS";
@@ -514,7 +534,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Light MacOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vgmoose.Light-MacOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";

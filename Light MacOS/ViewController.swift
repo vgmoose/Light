@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, WebUIDelegate {
 
 	@IBOutlet weak var conversation: WebView!
 	
@@ -20,6 +20,8 @@ class ViewController: NSViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+//		conversation.delegate = selfhttps://img1.etsystatic.com/042/0/9741230/il_570xN.634617915_ipqj.jpg
 		
 		var url = URL(fileURLWithPath: Bundle.main.path(forResource: "chat", ofType: "html")!)
 		
@@ -50,17 +52,25 @@ class ViewController: NSViewController {
 	// side is 'l' or 'r', depending on which side to appear on
 	func message(side: String, msg: String)
 	{
-		// TODO: if a nearby, use 'a'
-		// TODO: if it contains an image, use 'i'
-		// TODO: support status's with 's' boolean
-		
-		let dom = conversation.mainFrame.domDocument
-		let div = dom!.getElementById("chat")
-		
-		let elem = dom!.createElement(side)
-		elem!.innerHTML = msg
-		div!.appendChild(elem)
-		
+		DispatchQueue.main.async
+		{
+			// TODO: if a nearby, use 'a'
+			// TODO: if it contains an image, use 'i'
+			// TODO: support status's with 's' boolean
+			
+			let dom = self.conversation.mainFrame.domDocument
+			let div = dom!.getElementById("chat")
+			
+			// escape html specific characters
+			var esc_msg = msg.replacingOccurrences(of: "&", with: "&#38;")
+			esc_msg = esc_msg.replacingOccurrences(of: "<", with: "&lt;")
+			esc_msg = esc_msg.replacingOccurrences(of: ">", with: "&gt;")
+			
+			let elem = dom!.createElement(side)
+			elem!.innerHTML = esc_msg
+			div!.appendChild(elem)
+		}
+
 
 	}
 

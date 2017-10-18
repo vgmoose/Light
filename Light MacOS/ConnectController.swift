@@ -23,6 +23,10 @@ class ConnectController : NSViewController
 		logic = ConnectLogic(proto: proto.titleOfSelectedItem!, prefs: myPrefs)
 
 	}
+	@IBAction func stateChanged(_ sender: Any)
+	{
+		data.stringValue = ConnectLogic.defaultFor(proto.titleOfSelectedItem!)
+	}
 	
 	func parsePrefs() -> [String:String]
 	{

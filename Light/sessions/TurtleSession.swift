@@ -27,6 +27,11 @@ class TurtleSession : LightSession
 		connect(host: host, port: port, delegate: self)
 	}
 	
+	static func defaultConfig() -> String
+	{
+		return "host: 127.0.0.1\nport: 55225\nnick: User"
+	}
+	
 	// performs a simple tcp connection
 	func connect(host: String, port: Int, delegate: StreamDelegate)
 	{
@@ -45,47 +50,45 @@ class TurtleSession : LightSession
 	}
 	
 	override func textEntered(msg: String) {
+		// attach nick for turtle protocol
 		let nickMsg = self.nick + ": " + msg
 		
+		// actually send message
 		send(target: "", message: nickMsg)
-		DispatchQueue.main.async
-			{
-				super.view.message(side: "r", msg: nickMsg)
-		}
+		
+		// update UI
+		super.view.message(side: "r", msg: msg)
 	}
 	
 	func recvText()
 	{
 		// start a new thread to listen for incoming text
 		DispatchQueue.global(qos: .userInitiated).async
-			{
-		// loop forever, so after receving some text, more can be received
-		while (true) {
-			
+		{
 			// create receving buffer (caps at 10KB at a time)
 			var buffer = [UInt8](repeating: 0, count: 10000)
 			
 			// read from socket
-			let bytesRead:Int = self.inputStream!.read(&buffer, maxLength: 10000)
+			var bytesRead:Int = self.inputStream!.read(&buffer, maxLength: 30)
 			
-//			// if it's disconnected, exit this loop
-//			if (!self.connected || bytesRead <= 0) {
-//				return
-//			}
-//			
-			DispatchQueue.main.async
-			{
+			// TODO: record number of clients
+			
+			// loop forever, so after receving some text, more can be received
+			while (true) {
+				
+				// read from socket
+				bytesRead = self.inputStream!.read(&buffer, maxLength: 10000)
+
 				// append it to the receiving view controller
 				var content = NSString(bytes: buffer,  length: bytesRead, encoding: String.Encoding.utf8.rawValue) as! String
-//				content = content.substring(from: content.indexOf(" ")!)
-				super.view.message(side: "l", msg: content)
+		//				content = content.substring(from: content.indexOf(" ")!)
+				super.view.message(side: "l", msg: content.substring(from: (content.range(of: "0m")?.upperBound)!))
+				
 			}
-			
-		}
 		}
 	}
 	
-	override func send(target: String, message: String)
+	func send(target: String, message: String)
 	{
 		// must be cast to a byte array to sendh
 		let bytes: [UInt8] = Array(message.utf8)

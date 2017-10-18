@@ -36,7 +36,7 @@ class LightSession : NSObject, StreamDelegate
 	
 	// send a message to the remote server, where 'target' can be
 	// session specific
-	func send(target: String, message: String) { }
+//	func send(target: String, message: String) { }
 	
 	// listen for any incoming messages
 	func listen() { }
