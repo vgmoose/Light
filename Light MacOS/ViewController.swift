@@ -71,7 +71,11 @@ class ViewController: NSViewController, WebUIDelegate {
 			div!.appendChild(elem)
 		}
 
-
+	}
+	
+	func reset()
+	{
+		self.conversation.scrollToEndOfDocument(nil)
 	}
 
 }

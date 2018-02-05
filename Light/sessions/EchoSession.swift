@@ -24,6 +24,7 @@ class EchoSession : LightSession
 		// echo message back to self after displaying once
 		super.view.message(side: "r", msg: msg)
 		super.view.message(side: "l", msg: msg)
+		super.view.reset()
 	}
 	
 }
